@@ -1,1 +1,1 @@
-# cwa_project
+# CWA project (Angular)
