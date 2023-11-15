@@ -9,7 +9,8 @@ import { EvenementService } from '../evenement.service';
 })
 export class CreationEvenementComponent {
   formulaire: FormGroup;
-  nouvelEvenement: any = { nom: '', dateEcheance: '', priorite: '', commentaire: '' };
+  nouvelEvenement: any = { nom: '', dateEcheance: '', priorite: '', commentaire: '', image: null };
+
   constructor(private fb: FormBuilder, private evenementService: EvenementService) {
     this.formulaire = this.fb.group({
       nom: ['', Validators.required],
@@ -24,10 +25,16 @@ export class CreationEvenementComponent {
       () => {
         console.log('Événement créé avec succès');
         // Réinitialiser le formulaire ou rediriger vers une autre page si nécessaire
-        this.nouvelEvenement = { nom: '', dateEcheance: '', priorite: '', commentaire: '' };
+        this.nouvelEvenement = { nom: '', dateEcheance: '', priorite: '', commentaire: '', image: null };
+        this.formulaire.reset(); // Réinitialise le formulaire
       },
       error => console.error(error)
     );
-    }
   }
 
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    // Vous pouvez maintenant utiliser le fichier comme vous le souhaitez, par exemple le stocker dans votre modèle.
+    this.nouvelEvenement.image = file;
+  }
+}

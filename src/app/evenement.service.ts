@@ -29,9 +29,9 @@ export class EvenementService {
       prixBillets: 25,
       genreEvenement: 'Théâtre',
       artistes: ['Ian McKellen', 'Judi Dench'],
-      image: './assetsShakespeare.jpg'
-
+      image: '<img src = ./assets/Shakespeare.jpg>' 
     },
+
     {
       id: '3',
       nom: 'Conférence: Future Tech Summit',
