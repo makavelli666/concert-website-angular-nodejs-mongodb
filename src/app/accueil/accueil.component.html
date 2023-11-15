@@ -1,0 +1,46 @@
+<!-- En-tête -->
+<header class="bg-primary text-white p-4">
+    <h1>Zenith Dijon</h1>
+  </header>
+  
+  <!-- Conteneur principal avec classes Bootstrap -->
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Liste des Événements à venir</h1>
+  
+    <!-- Carrousel Bootstrap -->
+    <ngb-carousel *ngIf="evenements && evenements.length > 0">
+        <ng-template ngbSlide *ngFor="let evenement of evenements">
+          <img class="d-block w-100" [src]="'assets/images/' + evenement.image" alt="{{ evenement.nom }}">
+          <div class="carousel-caption">
+            <h5>{{ evenement.nom }}</h5>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+      
+  
+    <!-- Liste des événements avec classes Bootstrap -->
+    <div *ngIf="evenements && evenements.length > 0" class="row">
+      <div *ngFor="let evenement of evenements" class="col-md-6">
+        <div class="card mb-4">
+          <img class="card-img-top" [src]="'assets/images/' + evenement.image" alt="{{ evenement.nom }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ evenement.nom }}</h5>
+            <a [routerLink]="['/details', evenement.id]" class="btn btn-primary">Détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Boutons de navigation Bootstrap -->
+    <div class="text-center mt-4">
+      <button routerLink="/creation" class="btn btn-success">Ajouter un Événement</button>
+      <button *ngIf="evenements && evenements.length > 0" [routerLink]="['/modification', evenements[0].id]" class="btn btn-warning">Modifier un Événement</button>
+      <button *ngIf="evenements && evenements.length > 0" [routerLink]="['/suppression', evenements[0].id]" class="btn btn-danger">Supprimer un Événement</button>
+    </div>
+  
+    <!-- Message si aucun événement n'est disponible -->
+    <div *ngIf="evenements.length === 0" class="text-center mt-4">
+      Aucun événement à venir pour le moment.
+    </div>
+  </div>
+  

@@ -1,0 +1,84 @@
+/* En-tête */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    color: #ffffff;
+    font-size: 3.1em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style du titre "Liste des Événements à venir" */
+  h1 {
+    text-align: center;
+    color: #1d1a1a;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Conteneur principal */
+  .accueil-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ajout d'une couleur de fond */
+    border-radius: 8px; /* Bords arrondis pour un aspect plus moderne */
+  }
+  
+  /* Liste des événements */
+  .evenements-list {
+    margin-top: 20px;
+  }
+  
+  /* Élément d'événement individuel */
+  .evenement-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f8f8; /* Couleur de fond légère pour différencier les événements */
+    border-radius: 4px; /* Bords arrondis pour un aspect plus moderne */
+  }
+  
+  /* Conteneur des boutons */
+  .buttons-container {
+    margin-top: 20px;
+    text-align: center; /* Centrer les boutons horizontalement */
+  }
+  
+  /* Bouton de style professionnel */
+  .btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Bords arrondis pour un aspect plus moderne */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Message s'il n'y a aucun événement */
+  .no-events-message {
+    margin-top: 20px;
+    color: #777;
+    text-align: center; /* Centrer le message horizontalement */
+  }
+  
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent pour le texte */
+    padding: 10px;
+    color: #fff; /* Couleur du texte */
+  }
+  
