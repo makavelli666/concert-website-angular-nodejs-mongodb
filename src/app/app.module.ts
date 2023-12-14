@@ -5,13 +5,16 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { AccueilComponent } from './accueil/accueil.component';
-import { CreationEvenementComponent } from './creation-evenement/creation-evenement.component';
-import { DetailsEvenementComponent } from './details-evenement/details-evenement.component';
-import { ModificationEvenementComponent } from './modification-evenement/modification-evenement.component';
-import { SuppressionEvenementComponent } from './suppression-evenement/suppression-evenement.component';
+import { AccueilComponent } from './evenement/accueil/accueil.component';
+import { CreationEvenementComponent } from './evenement/creation-evenement/creation-evenement.component';
+import { DetailsEvenementComponent } from './evenement/details-evenement/details-evenement.component';
+import { ModificationEvenementComponent } from './evenement/modification-evenement/modification-evenement.component';
+import { SuppressionEvenementComponent } from './evenement/suppression-evenement/suppression-evenement.component';
+import { InscriptionComponent } from './utilisateur/inscription/inscription.component';
+import { ConnexionComponent } from './utilisateur/connexion/connexion.component';
+import { PagedepaimentComponent} from "./utilisateur/pagedepaiment/pagedepaiment.component";
+import { GestionreservationComponent} from "./utilisateur/gestionreservation/gestionreservation.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +24,10 @@ import { SuppressionEvenementComponent } from './suppression-evenement/suppressi
     DetailsEvenementComponent,
     ModificationEvenementComponent,
     SuppressionEvenementComponent,
+    InscriptionComponent,
+    ConnexionComponent,
+    PagedepaimentComponent,
+    GestionreservationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,10 @@ import { SuppressionEvenementComponent } from './suppression-evenement/suppressi
       { path: 'details/:id', component: DetailsEvenementComponent },
       { path: 'modification/:id', component: ModificationEvenementComponent },
       { path: 'suppression/:id', component: SuppressionEvenementComponent },
+      { path: 'inscription', component: InscriptionComponent },
+      { path: 'connexion', component: ConnexionComponent },
+      { path: 'paiement/:id', component: PagedepaimentComponent},
+      { path: 'réservation/:id', component: GestionreservationComponent}
     ]),
   ],
   providers: [],
@@ -41,3 +52,4 @@ import { SuppressionEvenementComponent } from './suppression-evenement/suppressi
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
+
